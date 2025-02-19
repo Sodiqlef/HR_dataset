@@ -101,10 +101,10 @@ pip install pandas numpy matplotlib seaborn
    ```
 
 2. **Map Performance Scores**:
-   - Convert performance scores (grades) to numerical values for analysis.
+   - Create performance grades to convert performance score  to numerical values for analysis.
    ```python
    performance_map = {'A': 4, 'B': 3, 'C': 2, 'D': 1}
-   df['Performance Score'] = df['Performance Score'].map(performance_map)
+   df['Performance Grade'] = df['Performance Score'].map(performance_map)
    ```
 
 ---
@@ -112,44 +112,29 @@ pip install pandas numpy matplotlib seaborn
 ### Data Visualization
 1. **Employee Distribution by Department**:
    - Visualize the number of employees in each department.
-   ```python
-   import seaborn as sns
-   sns.countplot(x='Department', data=df)
-   ```
 
 2. **Salary Distribution**:
    - Analyze the distribution of salaries using a histogram or boxplot.
-   ```python
-   sns.histplot(df['Salary'], kde=True)
-   ```
+   
 
 3. **Performance by Gender**:
    - Compare performance scores across genders.
-   ```python
-   sns.boxplot(x='Gender', y='Performance Score', data=df)
-   ```
 
 4. **Joining Trends Over Time**:
    - Visualize the number of employees joining each year or month.
-   ```python
-   sns.countplot(x='Joining Year', data=df)
-   ```
 
 5. **Age vs. Salary**:
    - Explore the relationship between age and salary.
-   ```python
-   sns.scatterplot(x='Age', y='Salary', hue='Gender', data=df)
-   ```
+  
 
 ---
 
 ## Results
 After cleaning and visualizing the data, the following insights were uncovered:
-- **Insight 1**: The IT department has the highest number of employees.
-- **Insight 2**: Employees with higher performance scores tend to have higher salaries.
+- **Insight 1**: The Finance department has the highest number of employees.
+- **Insight 2**: Performance scores do not necessarily correlate with salary levels.
 - **Insight 3**: Most employees joined in the year 2020.
-- **Insight 4**: The average salary increases with age, but the trend varies by gender.
-
+- **Insight 4**: The male gender is the most employed
 Visualizations are saved in the `plots/` folder.
 
 ---
@@ -165,7 +150,7 @@ Visualizations are saved in the `plots/` folder.
    ```
 3. Install the required libraries:
    ```bash
-   pip install -r requirements.txt
+   pip install pandas numpy matplotlib seaborn
    ```
 4. Run the Jupyter Notebook or Python script:
    ```bash
@@ -176,9 +161,5 @@ Visualizations are saved in the `plots/` folder.
 
 ---
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
 
 Feel free to contribute or suggest improvements!
